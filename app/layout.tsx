@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat,Lusitana  } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import { DarkLight } from "@/components/ui/DarkLight";
 
-const inter = Inter({ subsets: ["latin"] });
+const lusitana = Lusitana({ subsets: ["latin"],weight: '700' });
+const montserrat = Montserrat({ subsets: ["latin"],weight: '700' });
 
 export const metadata: Metadata = {
   title: "Juan Cruz Cortinas",
@@ -18,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={inter.className}>
+      <body className={lusitana.className}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
